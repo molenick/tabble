@@ -1,0 +1,66 @@
+@tailwind base;
+
+main {
+  @apply bg-blue-300 text-slate-600;
+}
+
+h1 {
+  @apply text-2xl mb-4 ;
+}
+
+h2 {
+  @apply font-bold;
+}
+
+p {
+  @apply mt-4;
+}
+
+a {
+  @apply text-blue-700 underline;
+}
+
+input {
+  @apply rounded p-1 ;
+}
+
+button {
+  @apply bg-blue-700 text-white font-bold rounded p-1;
+}
+
+.page {
+  @apply m-auto w-full min-h-full max-w-3xl bg-blue-300;
+}
+
+.wrapper {
+  @apply relative inset-0 shadow-2xl bg-slate-50 p-4 min-h-full;
+}
+
+
+.explanation {
+  @apply pt-2 p-4 rounded border border-slate-400 bg-blue-100;
+}
+
+.demo-elements {
+  @apply mt-8;
+}
+
+.demo-elements-container {
+  @apply flex flex-col mt-4 p-4 space-y-4 bg-slate-200 rounded shadow-2xl border border-slate-400 max-w-xs;
+}
+
+.overlay {
+  @apply absolute inset-0 align-middle;
+}
+
+.overlay--hidden {
+  @apply hidden;
+}
+
+.overlay__background {
+  @apply opacity-75 bg-black absolute inset-0;
+}
+
+.overlay__wrapper {
+  @apply z-20 absolute top-20 left-8 right-8 bg-gray-200 p-4 shadow-2xl rounded border border-slate-400;
+}

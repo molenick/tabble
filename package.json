@@ -1,0 +1,27 @@
+{
+  "name": "tabble",
+  "version": "1.0.0",
+  "description": "A simple, framework-agnostic accessiblity tool for managing HTML element tabindices.",
+  "main": "src/tabble.js",
+  "type": "module",
+  "scripts": {
+    "test": "jasmine",
+    "test:watch": "nodemon -e js --exec 'npm test --random=false'",
+    "demo": "serve demo -S"
+  },
+  "keywords": [
+    "accessibility",
+    "dom",
+    "tabIndex"
+  ],
+  "author": "Matt Olenick",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.18.1",
+    "eslint": "^8.8.0",
+    "jasmine": "^4.0.2",
+    "jsdom": "^19.0.0",
+    "nodemon": "^2.0.15",
+    "serve": "^13.0.2"
+  }
+}

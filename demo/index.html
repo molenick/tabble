@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <title>Tabble Demonstration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <section class="page">
+        <section class="wrapper">
+          <section class="content main-content">
+            <h1>Tabble Demonstration</h1>
+            <section class="explanation">
+              <h2>Explanation</h2>
+              <p>When the overlay is absent, focusable elements within the main page can receive focus by pressing the tab key.</p>
+            </section>
+            <section class="demo-elements">
+              <h2>Main page elements</h2>
+              <section class="demo-elements-container">
+                <input id="main-input" placeholder="Input element">
+                <button id="show-overlay" onclick="window.show()">Show overlay</button>
+              </section>
+            </section>
+          </section>
+          <div class="overlay overlay--hidden" role="dialog" aria-modal="true" aria-live="assertive" aria-atomic="true" aria-label="Overlay">
+            <section class="overlay__background"></section>
+            <section class="overlay__wrapper">
+              <section class="content overlay-content">
+                <section class="explanation">
+                  <h2>Explanation</h2>
+                  <p>When the overlay is present, the focusable elements withing the main page can no longer receive focus.</p>
+                  <p>Only focusable elements within the overlay will be able to receive focus.</p>
+                </section>
+                <section class="demo-elements">
+                  <h2>Overlay elements</h2>
+                  <section class="demo-elements-container">
+                    <input id="overlay-input" placeholder="Input element">
+                    <button id="hide-overlay" onclick="window.hide()">Hide the overlay</button>
+                  </section>
+                </section>
+              </section>
+            </section>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module">
+      import Tabble from './tabble.js'
+
+      const body = document.querySelector('body')
+      const config = {
+        disable: ['main *'],
+        ignore: ['.overlay *']
+      }
+
+      const tabble = new Tabble(body, config)
+      tabble.record()
+      window.tabble = tabble
+
+      const show = () => {
+        tabble.disable()
+        document.querySelector('.overlay').setAttribute('class', 'overlay')
+      }
+
+      const hide = () => {
+        tabble.restore()
+        document.querySelector('.overlay').setAttribute('class', 'overlay overlay--hidden')
+        document.querySelector('#show-overlay').focus()
+      }
+
+      window.show = show
+      window.hide = hide
+    </script>
+    <script>
+
+    </script>
+  </body>
+</html>
