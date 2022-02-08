@@ -11,7 +11,7 @@ npm install tabble
 
 ## Try the demo
 
-Visit the hosted [demo page](https://molenick.github.io/tabble). For more info, please see the [demo readme](demo/README.md).
+Visit the hosted [demo page](https://molenick.github.io/tabble). For more info, please see the [demo readme](https://github.com/molenick/tabble/blob/main/demo/README.md).
 
 ## Usage Example:
 
