@@ -1,6 +1,6 @@
 {
   "name": "tabble",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A simple, framework-agnostic accessiblity tool for managing HTML element tabindices.",
   "main": "src/tabble.js",
   "type": "module",
